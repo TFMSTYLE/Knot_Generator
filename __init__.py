@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Knot",
     "author": "The French Monkey",
-    "version": (1, 0, 1),
+    "version": (1, 0, 2),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Knot",
     "description": "Generate mathematical knots",
@@ -14,6 +14,11 @@ bl_info = {
 
 import bpy, math
 from mathutils import Vector
+
+try:
+    from . import relay_updater
+except ImportError:  # the Addon Collection has its own updates
+    relay_updater = None
 
 # ------------------------------------------------------------------------
 # Knot Generation Functions
@@ -383,6 +388,8 @@ class VIEW3D_PT_knot_generator(bpy.types.Panel):
     bl_category = "Knot"
 
     def draw(self, context):
+        if relay_updater:
+            relay_updater.draw(self.layout)
         layout = self.layout
         p = context.scene.kgen_props
         o = context.object
@@ -427,11 +434,15 @@ classes = (
 )
 
 def register():
+    if relay_updater:
+        relay_updater.register("blender-knot")
     for cls in classes:
         bpy.utils.register_class(cls)
     bpy.types.Scene.kgen_props = bpy.props.PointerProperty(type=KGProperties)
 
 def unregister():
+    if relay_updater:
+        relay_updater.unregister()
     for cls in reversed(classes):
         bpy.utils.unregister_class(cls)
     del bpy.types.Scene.kgen_props
