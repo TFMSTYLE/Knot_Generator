@@ -3,7 +3,7 @@
 ![knot-thumb](https://github.com/user-attachments/assets/685ac825-2578-4f92-8e78-3e513d4812a2)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.0  
+**Version:** 1.0.1  
 
 ---
 
@@ -122,3 +122,21 @@ Automatically names the object according to the chosen knot type.
 - Enable **Live Update** to see changes instantly while tuning parameters.  
 - Generated geometry is clean, manifold, and suitable for rendering, simulation, or further mesh editing.  
 - Combining procedural knots with materials or displacement textures can produce realistic rope or wire structures.
+
+---
+
+## Install
+
+Needs Blender 4.2 or later. Get the zip from [tfmstyle.com](https://tfmstyle.com), then in Blender open Edit > Preferences > Get Extensions, open the menu at the top right and pick Install from Disk.
+
+To build the zip yourself, run this in the repo folder:
+
+```bash
+blender --command extension build
+```
+
+---
+
+## License
+
+GPL 3.0 or later. See [LICENSE](LICENSE).
