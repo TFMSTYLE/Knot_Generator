@@ -3,7 +3,7 @@
 ![knot-thumb](https://github.com/user-attachments/assets/685ac825-2578-4f92-8e78-3e513d4812a2)
 
 **Author:** The French Monkey (TFMSTYLE)  
-**Version:** 1.0.2  
+**Version:** 1.0.3  
 
 ---
 

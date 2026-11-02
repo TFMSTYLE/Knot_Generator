@@ -4,7 +4,7 @@
 bl_info = {
     "name": "Knot",
     "author": "The French Monkey",
-    "version": (1, 0, 2),
+    "version": (1, 0, 3),
     "blender": (4, 2, 0),
     "location": "View3D > Sidebar > Knot",
     "description": "Generate mathematical knots",

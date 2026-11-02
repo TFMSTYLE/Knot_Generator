@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "tfmstyle_knot"
-version = "1.0.2"
+version = "1.0.3"
 name = "TFMSTYLE - Knot"
 tagline = "Generate mathematical knots"
 maintainer = "The French Monkey"
